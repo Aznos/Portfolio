@@ -1,7 +1,9 @@
 function App() {
   return (
     <>
-        <h1 className="text-center text-4xl">Portfolio</h1>
+        <div className="bg-bg-primary w-64 h-12">
+            <h1 className="text-text-primary">Hello World!</h1>
+        </div>
     </>
   )
 }
