@@ -1,8 +1,10 @@
+import Navbar from './components/Navbar'
+
 function App() {
   return (
     <>
-        <div className="bg-bg-primary w-64 h-12">
-            <h1 className="text-text-primary">Hello World!</h1>
+        <div className="min-h-screen w-full flex flex-col bg-bg-primary">
+          <Navbar />
         </div>
     </>
   )
