@@ -2,7 +2,8 @@ import { motion } from 'framer-motion'
 
 export default function ViewWorkButton() {
     return (
-        <motion.button
+        <motion.a
+            href="#projects"
             initial="rest"
             whileHover="hover"
             whileTap="tap"
@@ -47,6 +48,6 @@ export default function ViewWorkButton() {
             }}
         >
             <span className="relative z-10">View My Work</span>
-        </motion.button>
+        </motion.a>
     )
 }

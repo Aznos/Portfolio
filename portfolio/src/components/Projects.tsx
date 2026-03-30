@@ -37,7 +37,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-display text-5xl font-bold text-text-primary"
+          className="font-display text-4xl sm:text-5xl font-bold text-text-primary"
         >
           MY WORK
         </motion.h2>
@@ -78,7 +78,7 @@ export default function Projects() {
             <div
               key={p.id}
               className="absolute"
-              style={{ left: cardLeft, top: nodeY, transform: 'translateY(-50%)' }}
+              style={{ left: cardLeft, top: nodeY, transform: 'translateY(-50%)', width: CARD_WIDTH }}
             >
               <ProjectCard data={p} side={isLeft ? 'left' : 'right'} index={i} />
             </div>

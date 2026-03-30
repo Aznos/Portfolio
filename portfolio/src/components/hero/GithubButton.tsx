@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
 
 export default function GithubButton() {
-    const ref = useRef<HTMLButtonElement>(null)
+    const ref = useRef<HTMLAnchorElement>(null)
     const mouseX = useMotionValue(-999)
     const mouseY = useMotionValue(-999)
     const spotlightOpacity = useMotionValue(0)
@@ -15,8 +15,11 @@ export default function GithubButton() {
     )
 
     return (
-        <motion.button
+        <motion.a
             ref={ref}
+            href="https://github.com/aznos"
+            target="_blank"
+            rel="noopener noreferrer"
             onMouseMove={(e) => {
                 if (!ref.current) return
                 const r = ref.current.getBoundingClientRect()
@@ -48,6 +51,6 @@ export default function GithubButton() {
                 style={{ background: spotlightBg, opacity: spotlightOpacity }}
             />
             <span className="relative z-10">GitHub</span>
-        </motion.button>
+        </motion.a>
     )
 }

@@ -77,7 +77,7 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-display text-5xl font-bold text-text-primary"
+            className="font-display text-4xl sm:text-5xl font-bold text-text-primary"
           >
             GET IN TOUCH
           </motion.h2>

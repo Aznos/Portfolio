@@ -53,7 +53,7 @@ export default function Hero() {
                 <rect width="100%" height="100%" filter="url(#grain)"/>
             </svg>
             <motion.div
-                className="absolute pointer-events-none rounded-full"
+                className="hidden md:block absolute pointer-events-none rounded-full"
                 style={{
                     left: mouseXPx, top: mouseYPx,
                     translateX: '-50%', translateY: '-50%',
@@ -73,16 +73,15 @@ export default function Hero() {
                 <motion.div
                     initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 0.5 }}
-                    className="mb-6 flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono select-none"
-                    style={{ border: '1px solid rgba(74,222,128,0.25)', background: 'rgba(74,222,128,0.05)', color: 'rgba(134,239,172,0.9)' }}
+                    className="mb-6 flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono select-none border border-accent-primary/25 bg-accent-primary/5 text-accent-primary"
                 >
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent-primary animate-pulse" />
                     Available for work
                 </motion.div>
                 <motion.h1
                     variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.055 } } }}
                     initial="hidden" animate="visible"
-                    className="text-center text-7xl font-display font-bold text-text-primary tracking-widest select-none"
+                    className="text-center text-5xl sm:text-7xl font-display font-bold text-text-primary tracking-widest select-none"
                 >
                     {TITLE_CHARS.map((ch, i) => (
                         <motion.span
@@ -106,7 +105,7 @@ export default function Hero() {
                 style={{ x: typewriterX, y: typewriterY }}
                 className="relative mt-4 h-9 flex items-center justify-center"
             >
-                <h2 className="text-2xl font-display font-bold text-text-secondary">
+                <h2 className="text-xl sm:text-3xl font-display font-bold text-text-secondary">
                     {displayed}<span className="animate-pulse text-accent-primary ml-0.5">|</span>
                 </h2>
             </motion.div>
@@ -116,7 +115,7 @@ export default function Hero() {
                 <motion.div
                     initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative mt-10 rounded-2xl cursor-default overflow-hidden"
+                    className="relative mt-6 sm:mt-10 rounded-2xl cursor-default overflow-hidden"
                     style={{
                         background: 'linear-gradient(160deg, rgba(22,22,22,0.95) 0%, rgba(14,14,14,0.95) 100%)',
                         border: '1px solid rgba(255,255,255,0.055)',
@@ -124,7 +123,7 @@ export default function Hero() {
                     }}
                 >
                     <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#e84c1e55] to-transparent" />
-                    <div className="px-8 py-5 flex flex-col gap-3 min-w-[320px]">
+                    <div className="px-5 py-4 sm:px-8 sm:py-5 flex flex-col gap-3">
                         <div className="flex items-center gap-3">
                             <span className="shrink-0 text-accent-primary" style={{ fontSize: '9px', lineHeight: 1 }}>{'>'}</span>
                             <p className="text-sm font-sans text-text-secondary">Building fast web apps, open-source tools, and games.</p>
@@ -147,7 +146,7 @@ export default function Hero() {
                 <motion.div
                     initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.9, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative flex flex-row mt-10 gap-5"
+                    className="relative flex flex-row mt-6 sm:mt-10 gap-5"
                 >
                     <ViewWorkButton />
                     <GithubButton />
@@ -155,12 +154,16 @@ export default function Hero() {
             </motion.div>
 
             {/* Scroll cue */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-text-muted">
+            <motion.div
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-text-muted"
+                animate={{ y: [0, 6, 0] }}
+                transition={{ repeat: Infinity, duration: 1.4, ease: 'easeInOut' }}
+            >
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="6 9 12 15 18 9"/>
                 </svg>
-            </div>
+            </motion.div>
         </div>
     )
 }
