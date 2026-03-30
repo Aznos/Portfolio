@@ -32,7 +32,7 @@ export default function ProjectCard({ data, side, index }: ProjectCardProps) {
         style={{ boxShadow: '0 0 20px #e84c1e44, 0 0 40px #e84c1e22' }}
       />
 
-      <div className="relative w-60 rounded-lg border border-border bg-bg-secondary p-4 overflow-hidden">
+      <div className="relative w-80 rounded-lg border border-border bg-bg-secondary p-4 overflow-hidden">
         <div
           className="absolute inset-x-0 top-0 h-px"
           style={{ background: 'linear-gradient(to right, transparent, #e84c1e55, transparent)' }}

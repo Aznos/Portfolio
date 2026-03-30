@@ -27,3 +27,15 @@
 .glow {
     box-shadow: 0 0 20px var(--accent-glow), 0 0 40px var(--accent-glow);
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 72px;
+}
+
+#about {
+    scroll-margin-top: 0;
+}
