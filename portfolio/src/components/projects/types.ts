@@ -29,11 +29,11 @@ export const PROJECTS: ProjectData[] = [
     year: 2025,
   },
   {
-    id: 'acorn',
-    name: 'Acorn',
-    description: 'A work in progress 2D game engine written from scratch using OpenGL, built for full control over performance',
-    githubUrl: 'https://github.com/Acorn-engine/Acorn',
-    tags: ['Game Engine', 'Kotlin', 'Low-Level'],
+    id: 'bornagain',
+    name: 'Born Again',
+    description: 'A free Bible reading app that guides new and growing believers through guided plain English summaries',
+    githubUrl: 'https://github.com/Aznos/Born-Again',
+    tags: ['React', 'Vite', 'Fullstacj', 'Postgres'],
     year: 2026,
   },
 ]
