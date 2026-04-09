@@ -33,6 +33,7 @@ export const PROJECTS: ProjectData[] = [
     name: 'Born Again',
     description: 'A free Bible reading app that guides new and growing believers through guided plain English summaries',
     githubUrl: 'https://github.com/Aznos/Born-Again',
+    liveUrl: 'https://bornagain.maddoxh.com',
     tags: ['React', 'Vite', 'Fullstacj', 'Postgres'],
     year: 2026,
   },
